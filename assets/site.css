@@ -28,9 +28,9 @@ h1 em { color:var(--green-dark); font-style:italic; font-weight:400; }
 .workflow strong { color:var(--navy); font-family:var(--serif); font-size:1.15rem; }
 .workflow small { color:var(--muted); font-size:.83rem; line-height:1.35; }
 .principle-band { background:var(--navy); color:#fff; }
-.principle-grid { align-items:baseline; display:grid; gap:32px; grid-template-columns:1fr 3fr; padding-bottom:32px; padding-top:32px; }
+.principle-grid { align-items:baseline; display:flex; justify-content:center; padding-bottom:32px; padding-top:32px; }
 .principle-grid .eyebrow { color:var(--gold); margin:0; }
-.principle-grid p:last-child { font-family:var(--serif); font-size:1.42rem; line-height:1.28; margin:0; }
+.principle-grid p:last-child { font-family:var(--serif); font-size:1.42rem; line-height:1.28; margin:0; max-width:850px; text-align:center; }
 .resource-library { padding-bottom:98px; padding-top:98px; }
 .section-intro { margin-bottom:42px; max-width:720px; }
 .section-intro h2 { font-size:clamp(2.35rem,5vw,4.1rem); letter-spacing:-.055em; line-height:.98; margin-bottom:16px; }
