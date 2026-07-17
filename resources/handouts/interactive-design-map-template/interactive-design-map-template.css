@@ -41,7 +41,8 @@ p { margin: 0 0 .75rem; }
 .field-card--expert .field-number, .field-card--expert .field-label { color: #796331; }
 .field-card ul { font-size: .75rem; line-height: 1.35; margin: .08in 0 .1in; padding-left: 1rem; }
 .field-card li + li { margin-top: .12rem; }
-.write-line { border-bottom: 1px solid var(--muted); color: var(--muted); font-family: Georgia, "Times New Roman", serif; font-size: .74rem; margin: .1in 0 .08in; overflow-wrap: anywhere; padding-bottom: .04in; }
+.write-line { align-items: end; color: var(--muted); display: flex; font-family: Georgia, "Times New Roman", serif; font-size: .74rem; gap: .06in; margin: .1in 0 .08in; min-width: 0; padding-bottom: .04in; }
+.write-line span { border-bottom: 1px solid var(--muted); flex: 1 1 auto; min-width: 0; }
 .helper { color: var(--muted); font-size: .68rem; margin: 0; }
 .map-reminder, .revision-note { background: var(--navy-deep); border-top: 4px solid var(--green); color: #f6f8ff; margin-top: .2in; padding: .14in .18in; }
 .map-reminder .eyebrow, .revision-note .eyebrow { color: var(--gold); }
