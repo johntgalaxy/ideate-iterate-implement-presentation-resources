@@ -1,0 +1,12 @@
+BUILD INTERACTIVE AND VISUAL MEDIA WITH AI
+Ideate, Iterate, and Implement
+Hillsborough College | Summer Institute 2026
+
+HOW TO USE THIS LOCAL COPY
+
+1. Keep this folder and all of its contents together.
+2. Open index.html in a web browser.
+3. Use the landing page to open the handouts and case studies.
+4. The workshop PowerPoint is available under resources/presentation/.
+
+The site is self-contained and does not require an internet connection.
