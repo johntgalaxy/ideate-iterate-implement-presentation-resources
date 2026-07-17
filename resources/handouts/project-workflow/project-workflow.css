@@ -1,0 +1,55 @@
+@import url("../interactive-design-map-template/interactive-design-map-template.css");
+
+.workflow-section { border-top: 1px solid var(--line); margin-top: .18in; padding-top: .15in; }
+.section-heading { display: grid; gap: .12in; grid-template-columns: .42in 1fr; margin-bottom: .12in; }
+.section-heading > span { color: var(--green-dark); font-size: .71rem; font-weight: 800; letter-spacing: .1em; padding-top: .07rem; }
+.section-heading p { color: var(--muted); font-size: .84rem; margin: 0; }
+pre { background: var(--navy-deep); border-left: 5px solid var(--green); color: #f6f8ff; margin: 0; padding: .13in .17in; white-space: pre-wrap; }
+pre code, .file-list { font: .65rem/1.38 "Fira Code", Consolas, monospace; }
+.preservation-grid { display: grid; gap: .1in; grid-template-columns: .9fr 1.1fr; }
+.record-card { border: 1px solid var(--line); border-top: 4px solid var(--navy); padding: .12in .14in; }
+.record-card.iterations { border-top-color: var(--gold); }
+.card-label { color: var(--green-dark); font-size: .67rem; font-weight: 800; letter-spacing: .08em; margin: 0 0 .05in; text-transform: uppercase; }
+.record-card h2 { font-size: 1rem; margin-bottom: .1in; }
+.record-card p { color: var(--muted); font-size: .77rem; line-height: 1.35; margin: 0; }
+.record-card .card-note { color: var(--navy); font-weight: 700; margin-top: .1in; }
+.file-list { color: var(--navy-deep); display: block; margin: .08in 0; }
+.record-card ul, .attach-card ul { font-size: .71rem; line-height: 1.34; margin: .08in 0 0; padding-left: 1rem; }
+.record-card li + li, .attach-card li + li { margin-top: .08rem; }
+.restart-grid { display: grid; gap: .1in; grid-template-columns: .72fr 1.28fr; }
+.attach-card { background: var(--surface); border-top: 4px solid var(--green); padding: .12in .14in; }
+.restart-prompt { border-left-color: var(--gold); padding: .12in .14in; }
+.restart-prompt code { font-size: .58rem; line-height: 1.32; }
+.workflow-rule { background: var(--navy); color: #fff; margin-top: .18in; padding: .13in .18in; }
+.workflow-rule .eyebrow { color: var(--gold); }
+.workflow-rule dl { display: grid; gap: .12in; grid-template-columns: repeat(3, 1fr); margin: .09in 0; }
+.workflow-rule dl div { border-left: 1px solid rgb(255 255 255 / 34%); padding-left: .1in; }
+.workflow-rule dt { color: var(--gold); font-size: .67rem; font-weight: 800; letter-spacing: .07em; text-transform: uppercase; }
+.workflow-rule dd { font-size: .75rem; line-height: 1.3; margin: .03rem 0 0; }
+.workflow-rule > p:last-child { font-size: .75rem; margin: 0; }
+
+@media (max-width: 700px) { .preservation-grid, .restart-grid, .workflow-rule dl { grid-template-columns: 1fr; } }
+@media print {
+  .title-block { padding: .14in 0 .08in; }
+  h1 { font-size: 1.72rem; margin: .06rem 0 .25rem; }
+  .deck { font-size: .73rem; }
+  .workflow-section { margin-top: .1in; padding-top: .08in; }
+  .section-heading { margin-bottom: .07in; }
+  .section-heading p { font-size: .68rem; }
+  pre { padding: .08in .1in; }
+  pre code, .file-list { font-size: .51rem; line-height: 1.18; }
+  .preservation-grid, .restart-grid { gap: .05in; }
+  .record-card, .attach-card { padding: .07in .09in; }
+  .card-label { font-size: .55rem; margin-bottom: .03in; }
+  .record-card h2 { font-size: .8rem; margin-bottom: .05in; }
+  .record-card p { font-size: .61rem; }
+  .record-card .card-note { margin-top: .05in; }
+  .record-card ul, .attach-card ul { font-size: .57rem; line-height: 1.25; margin-top: .045in; }
+  .record-card li + li, .attach-card li + li { margin-top: .04rem; }
+  .restart-prompt { padding: .07in .09in; }
+  .restart-prompt code { font-size: .47rem; line-height: 1.2; }
+  .workflow-rule { margin-top: .1in; padding: .08in .1in; }
+  .workflow-rule dl { gap: .06in; margin: .05in 0; }
+  .workflow-rule dt { font-size: .53rem; }
+  .workflow-rule dd, .workflow-rule > p:last-child { font-size: .58rem; }
+}

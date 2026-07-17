@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="A STEM case study showing how an Interactive Design Map becomes a testable Earth-to-Mars mission-planning interactive.">
+  <title>Earth-to-Mars Transfer Window Explorer</title>
+  <link rel="stylesheet" href="earth-to-mars-transfer-window-explorer.css">
+</head>
+<body>
+  <main class="handout">
+    <section class="page" aria-labelledby="page-one-title">
+      <header class="masthead">
+        <span>Ideate. Iterate. Implement.</span>
+        <span>CASE STUDY</span>
+      </header>
+
+      <p class="eyebrow">Design Map</p>
+      <h1 id="page-one-title">From a Physics Outcome to an Interactive Mission Planner</h1>
+      <p class="intro">This instructor begins with a course outcome and NASA/JPL resources. The <strong>Interactive Design Map</strong> makes the scientific model, learner action, validation rules, and delivery requirements explicit enough for a testable first build.</p>
+
+      <section class="starting-point" aria-label="The instructor's starting point">
+        <figure class="artwork">
+          <svg role="img" aria-labelledby="orbit-title orbit-description" viewBox="0 0 600 270" style="display:block;height:2.3in;width:100%" xmlns="http://www.w3.org/2000/svg">
+            <title id="orbit-title">Illustrative Earth-to-Mars Hohmann-transfer diagram</title>
+            <desc id="orbit-description">A simplified orbital diagram with the Sun at center, Earth at its launch position, Mars ahead of Earth, and an idealized transfer ellipse.</desc>
+            <rect width="600" height="270" fill="#eef2f1"/>
+            <circle cx="263" cy="137" r="24" fill="#d5b979"/>
+            <circle cx="263" cy="137" r="10" fill="#f5e2a9"/>
+            <circle cx="263" cy="137" r="75" fill="none" stroke="#149966" stroke-width="2" stroke-dasharray="4 5"/>
+            <circle cx="263" cy="137" r="125" fill="none" stroke="#576173" stroke-width="2" stroke-dasharray="4 5"/>
+            <ellipse cx="338" cy="137" rx="75" ry="49" fill="none" stroke="#17254e" stroke-width="3"/>
+            <path d="M338 88 C384 96 408 115 413 130" fill="none" stroke="#17254e" stroke-width="2"/>
+            <path d="M410 120 L418 132 L404 135" fill="none" stroke="#17254e" stroke-width="2"/>
+            <circle cx="338" cy="88" r="8" fill="#1b6fa8"/>
+            <circle cx="380" cy="39" r="10" fill="#bb5c3f"/>
+            <path d="M338 88 A75 75 0 0 1 380 75" fill="none" stroke="#0b7049" stroke-width="3"/>
+            <text x="231" y="178" fill="#202532" font-family="Arial, sans-serif" font-size="13">Sun</text>
+            <text x="325" y="73" fill="#202532" font-family="Arial, sans-serif" font-size="13">Earth at launch</text>
+            <text x="394" y="37" fill="#202532" font-family="Arial, sans-serif" font-size="13">Mars ahead</text>
+            <text x="420" y="119" fill="#17254e" font-family="Arial, sans-serif" font-size="13">transfer path</text>
+            <text x="185" y="62" fill="#0b7049" font-family="Arial, sans-serif" font-size="12">Earth orbit</text>
+            <text x="112" y="27" fill="#576173" font-family="Arial, sans-serif" font-size="12">Mars orbit</text>
+            <text x="354" y="112" fill="#0b7049" font-family="Arial, sans-serif" font-size="12">phase angle</text>
+          </svg>
+          <figcaption>Illustrative idealized heliocentric model—not a NASA image or a mission-planning tool. Sources: <a href="https://science.nasa.gov/learn/basics-of-space-flight/chapter4-1/">NASA Science, “Trajectories: Hohmann Transfer Orbits”</a>; <a href="https://www.jpl.nasa.gov/edu/resources/lesson-plan/lets-go-to-mars-calculating-launch-windows/">NASA/JPL Education, “Let’s Go to Mars!”</a></figcaption>
+        </figure>
+
+        <aside class="starting-panel" aria-labelledby="starting-point-title">
+          <h2 id="starting-point-title">What the instructor brings</h2>
+          <dl>
+            <dt>Course</dt>
+            <dd>Introductory Astronomy or Calculus-Based Physics</dd>
+            <dt>Course outcome</dt>
+            <dd>Students will use a simplified orbital model to explain why an Earth-to-Mars mission must launch when Mars is in the appropriate position relative to Earth.</dd>
+            <dt>Available resource</dt>
+            <dd>NASA/JPL material on Hohmann transfers and Mars launch windows.</dd>
+            <dt>Initial idea</dt>
+            <dd>“I want students to manipulate a visual model of an Earth-to-Mars transfer, but I do not know how to turn the physics into an interactive activity.”</dd>
+          </dl>
+        </aside>
+      </section>
+
+      <section aria-labelledby="map-title">
+        <div class="map-heading">
+          <span class="section-number">01</span>
+          <h2 id="map-title">Interactive Design Map</h2>
+        </div>
+
+        <div class="design-map">
+          <article class="map-card">
+            <h3>Learning Context</h3>
+            <p class="card-label">Why this activity exists</p>
+            <p class="notes">Introductory astronomy or physics students often understand that planets orbit the Sun but struggle to explain why a spacecraft cannot simply launch toward Mars at any time. This short, formative activity connects orbital motion, travel time, and launch position. Students reason about timing instead of memorizing an isolated launch-window fact.</p>
+          </article>
+
+          <article class="map-card map-card--interaction">
+            <h3>Interaction Design</h3>
+            <p class="card-label">What learners do</p>
+            <p class="notes">Learners predict whether Mars should be ahead of or behind Earth, then adjust its departure phase angle with an accessible slider or numeric control. A live diagram shows an idealized Hohmann transfer while Mars continues in orbit. Learners use arrival mismatch to refine the angle, receive explanation-based feedback, and explain why an opposite-Mars launch misses the target.</p>
+          </article>
+
+          <article class="map-card map-card--expert">
+            <h3>Expert Content</h3>
+            <p class="card-label">What the artifact must accurately use</p>
+            <p class="notes">Use an idealized heliocentric Hohmann model: coplanar circular orbits; Sun central body; Earth = 1 AU; Mars = 1.523679 AU; 1 AU = 149,597,870.7 km; μ = 1.32712440018 × 10<sup>11</sup> km³/s². Calculate transfer time, speeds, delta-v values, and phase angle. Validate ≈258.9 days, 44.4° ahead, and 2.94 / 2.65 / 5.59 km/s. State all model limits.</p>
+          </article>
+
+          <article class="map-card map-card--artifact">
+            <h3>Artifact Specification</h3>
+            <p class="card-label">What the finished artifact must be and do</p>
+            <p class="notes">Create a 7–10 minute Canvas formative interactive with deterministic client-side calculations. Render and update the diagram with SVG or Canvas. Provide keyboard-operable controls, a visible numeric input, high contrast, and text equivalents. No drag-and-drop, time limits, decorative animation, external APIs, or runtime dependencies. Package as Canvas-compatible SCORM 1.2; complete at the final task; include a textual results table.</p>
+          </article>
+        </div>
+      </section>
+
+      <aside class="page-one-callout">In this case, “expert content” is not simply subject vocabulary. It includes the mathematical model, assumptions, constants, expected values, and limits that make the generated simulation scientifically accountable.</aside>
+
+      <footer class="footer">
+        <span>Hillsborough College | Summer Institute 2026</span>
+        <span>1</span>
+      </footer>
+    </section>
+
+    <section class="page" aria-labelledby="page-two-title">
+      <header class="masthead">
+        <span>Ideate. Iterate. Implement.</span>
+        <span>CASE STUDY</span>
+      </header>
+
+      <p class="eyebrow">Test specification</p>
+      <h1 id="page-two-title">The Prompt Becomes a Test Specification</h1>
+      <p class="intro">The prompt does not ask AI to “make an orbital-mechanics simulation.” It specifies the learning problem, the model, the calculations, the expected results, and the conditions under which the result is valid.</p>
+
+      <section class="prompt-panel" aria-labelledby="prompt-title">
+        <h2 id="prompt-title" class="visually-hidden">Test Specification</h2>
+        <p class="prompt-label">Design Map → Test Specification</p>
+        <p>Create an accessible, browser-based Canvas-compatible SCORM 1.2 activity for introductory astronomy or calculus-based physics. Students use a simplified orbital model to explain why an Earth-to-Mars mission must launch when Mars is properly positioned relative to Earth.</p>
+        <p>Create a 7–10 minute formative interactive called <strong>Earth-to-Mars Transfer Window Explorer</strong>. Use deterministic client-side calculations and an idealized heliocentric Hohmann-transfer model; do not use an LLM, external API, or hard-coded results to calculate orbital values.</p>
+        <p><strong>Scientific model:</strong> Treat Earth and Mars as coplanar bodies in circular heliocentric orbits, with the Sun as the central body. Use r<sub>Earth</sub> = 1 AU, r<sub>Mars</sub> = 1.523679 AU, 1 AU = 149,597,870.7 km, and μ = 1.32712440018 × 10<sup>11</sup> km³/s². State that this is an idealized instructional model, not a real mission-planning tool; it excludes eccentricity, inclination, launch from Earth’s gravity well, perturbations, mid-course corrections, and real ephemerides.</p>
+        <p><strong>Calculations:</strong> a = (r<sub>1</sub> + r<sub>2</sub>)/2; t = π √(a³/μ); v = √(μ/r); v<sub>transfer</sub> = √[μ(2/r − 1/a)]; Δv<sub>1</sub> = v<sub>transfer at Earth</sub> − v<sub>Earth</sub>; Δv<sub>2</sub> = v<sub>Mars</sub> − v<sub>transfer at Mars</sub>; φ = 180° − n<sub>Mars</sub> × t, where n<sub>Mars</sub> = √(μ/r<sub>Mars</sub>³).</p>
+        <p><strong>Validate:</strong> transfer time ≈258.9 days; Mars phase ≈44.4° ahead; Earth departure delta-v ≈2.94 km/s; Mars arrival circularization delta-v ≈2.65 km/s; total idealized heliocentric delta-v ≈5.59 km/s.</p>
+        <strong>Learning flow and requirements</strong>
+        <ul>
+          <li>Start with a prediction: should Mars be ahead of Earth, behind Earth, or directly opposite Earth at launch?</li>
+          <li>Show a live, labeled two-dimensional diagram: Sun, both circular orbits, Hohmann-transfer ellipse, Earth’s launch position, and Mars’s position.</li>
+          <li>Provide a keyboard-accessible phase-angle slider linked to a visible numeric input.</li>
+          <li>Update and explain predicted arrival mismatch as phase angle changes; at the optimal angle, connect the result to Mars’s continued motion.</li>
+          <li>End with a transfer question: why would launching when Mars is directly opposite Earth miss Mars in this model?</li>
+          <li>Use SVG or Canvas; do not rely on drag-and-drop, color alone, time limits, decorative animation, or external runtime dependencies.</li>
+          <li>Provide an accessible textual results table with phase angle, transfer time, arrival mismatch, departure delta-v, arrival delta-v, and total delta-v.</li>
+          <li>Use a high-contrast, clearly labeled, responsive layout. Package as Canvas-compatible SCORM 1.2; complete after the final transfer question.</li>
+          <li>Deliver a self-contained SCORM package, editable source files, a concise README, and automated or runnable baseline-value checks.</li>
+        </ul>
+      </section>
+
+      <section class="controls" aria-labelledby="controls-title">
+        <h2 id="controls-title" class="visually-hidden">What the prompt now controls</h2>
+        <article class="control">
+          <h3>Learning Context</h3>
+          <p>Novice astronomy or physics students reason about timing, motion, and launch position.</p>
+        </article>
+        <article class="control">
+          <h3>Interaction Design</h3>
+          <p>Prediction, accessible phase adjustment, live mismatch feedback, and a transfer explanation.</p>
+        </article>
+        <article class="control">
+          <h3>Expert Content</h3>
+          <p>Model assumptions, constants, formulas, expected values, validation, and scientific limits.</p>
+        </article>
+        <article class="control">
+          <h3>Artifact Specification</h3>
+          <p>A deterministic, accessible SCORM simulation with text equivalents and completion reporting.</p>
+        </article>
+      </section>
+
+      <aside class="refine-callout">
+        <h2>Make the complete process visible</h2>
+        <p>Buckets → first build → lens review → targeted revision → testing → implementation. Correct model or interface mismatches without discarding verified calculations, then validate baseline values before packaging and Canvas placement.</p>
+      </aside>
+
+      <footer class="footer">
+        <span>Hillsborough College | Summer Institute 2026</span>
+        <span>2</span>
+      </footer>
+    </section>
+  </main>
+</body>
+</html>

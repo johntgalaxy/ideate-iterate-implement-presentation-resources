@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="A four-category workspace for framing an instructional idea and creating a first-build brief.">
+    <title>Interactive Design Map Worksheet</title>
+    <link rel="stylesheet" href="interactive-design-map-template.css">
+  </head>
+  <body>
+    <main class="handout">
+      <section class="page page--map" aria-labelledby="page-title">
+        <header class="masthead"><p class="kicker">Ideate. Iterate. Implement.</p><p class="series-label">HANDOUT</p></header>
+
+        <section class="title-block">
+          <p class="eyebrow">Start here</p>
+          <h1 id="page-title">Interactive<br>Design Map</h1>
+          <p class="deck">Begin with what you know and fill four groups of design decisions gradually before and during the first build. Missing information becomes the subject of the conversation with AI.</p>
+        </section>
+
+        <section class="map-intro" aria-label="How to use the map">
+          <p><strong>Start anywhere useful.</strong> Begin with an outcome, assessment, source asset, or partially formed idea. Use the companion guides when a bucket needs more thought; you do not need to complete every line before experimenting.</p>
+        </section>
+
+        <div class="field-grid">
+          <article class="field-card field-card--context">
+            <p class="field-number">Bucket 1 of 4</p>
+            <h2>Learning Context</h2>
+            <p class="field-label">Why this activity exists</p>
+            <ul>
+              <li>Course, module, audience, and prerequisites</li>
+              <li>Outcomes, assessment, and learning purpose</li>
+              <li>Placement, difficulty, and time</li>
+              <li>What comes before and after</li>
+            </ul>
+            <p class="write-line">My context: ________________________________________________</p>
+            <p class="helper">Use: Outcome Filter + Learning Context Guide</p>
+          </article>
+
+          <article class="field-card field-card--interaction">
+            <p class="field-number">Bucket 2 of 4</p>
+            <h2>Interaction Design</h2>
+            <p class="field-label">What learners do</p>
+            <ul>
+              <li>Interaction form or species</li>
+              <li>Instructional role and target thinking</li>
+              <li>Student action and what changes</li>
+              <li>Feedback, progression, reset, or transfer</li>
+            </ul>
+            <p class="write-line">My interaction: ____________________________________________</p>
+            <p class="helper">Use: Interaction Design Guide</p>
+          </article>
+
+          <article class="field-card field-card--expert">
+            <p class="field-number">Bucket 3 of 4</p>
+            <h2>Expert Content</h2>
+            <p class="field-label">What the artifact must accurately use</p>
+            <ul>
+              <li>Verified facts, explanations, sources, and assets</li>
+              <li>Examples, evidence, and conventions</li>
+              <li>Misconceptions, assumptions, and limits</li>
+              <li>Tacit judgment AI must not invent</li>
+            </ul>
+            <p class="write-line">My content: ________________________________________________</p>
+            <p class="helper">Use: Expert Content Guide</p>
+          </article>
+
+          <article class="field-card field-card--artifact">
+            <p class="field-number">Bucket 4 of 4</p>
+            <h2>Artifact Specification</h2>
+            <p class="field-label">What the finished artifact must be and do</p>
+            <ul>
+              <li>Deliverable, format, visual direction, and controls</li>
+              <li>Accessibility, responsive behavior, and navigation</li>
+              <li>Files, assets, constraints, and prohibited features</li>
+              <li>Testing, Canvas, SCORM, completion, and preservation</li>
+            </ul>
+            <p class="write-line">My specifications: _________________________________________</p>
+            <p class="helper">Use: Artifact Specification Guide</p>
+          </article>
+        </div>
+
+        <aside class="map-reminder"><p class="eyebrow">First-build move</p><h2>Let missing information guide the conversation.</h2><p>Build the smallest convincing slice, then use the Iteration Checklist to diagnose one mismatch, request a targeted change, preserve what works, and test the result.</p></aside>
+        <footer><span>Hillsborough College | Summer Institute 2026</span><span>1</span></footer>
+      </section>
+
+      <section class="page page--prompt" aria-labelledby="prompt-title">
+        <header class="masthead"><p class="kicker">Ideate. Iterate. Implement.</p><p class="series-label">HANDOUT</p></header>
+        <section class="title-block title-block--compact">
+          <p class="eyebrow">Then prompt</p>
+          <h1 id="prompt-title">The Map Becomes<br>a First-Build Brief</h1>
+          <p class="deck">Copy this structure and replace the bracketed notes with the decisions you recorded on page one.</p>
+        </section>
+        <section class="prompt-section" aria-label="First-build brief template">
+          <pre class="prompt-block"><code>Create a short, accessible learning activity for [course or module].
+
+Learning Context
+The activity supports this outcome: [student outcome]. Learners need to [practice or understand]. Use it as [prepare, practice, review, or enrichment] after [what comes before] and before [what comes after].
+
+Interaction Design
+Use a [small interaction pattern]. Learners will [describe the learner action] and see [what changes or feedback appears]. Include [brief explanation, reflection, or transfer move].
+
+Expert Content
+Accurately use [approved facts, terms, sources, data, examples, and assets]. Address [misconception or boundary]. Do not invent, replace, or extend [content that requires instructor verification].
+
+Artifact Specification
+Create a [length and format] artifact with [controls and instructions]. It must be [accessibility and responsive requirements]. Do not use [prohibited features]. Prepare it for [Canvas placement and/or SCORM requirement].
+
+Keep the code self-contained, reviewable, and easy to revise.</code></pre>
+        </section>
+        <aside class="revision-note"><p class="eyebrow">ITERATE after the first build</p><h2>Diagnose through one lens.</h2><dl><div><dt>Misses the point?</dt><dd>Review Learning Context.</dd></div><div><dt>Feels like a demo?</dt><dd>Review Interaction Design.</dd></div><div><dt>Gets facts wrong?</dt><dd>Review Expert Content.</dd></div><div><dt>Fails visually or technically?</dt><dd>Review Artifact Specification.</dd></div></dl></aside>
+        <footer><span>Hillsborough College | Summer Institute 2026</span><span>2</span></footer>
+      </section>
+    </main>
+  </body>
+</html>

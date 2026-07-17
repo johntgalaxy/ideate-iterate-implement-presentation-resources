@@ -1,0 +1,94 @@
+:root {
+  --navy: #17254e;
+  --navy-deep: #0d1733;
+  --green: #149966;
+  --green-dark: #0b7049;
+  --gold: #d5b979;
+  --ink: #202532;
+  --muted: #576173;
+  --line: #d8dce4;
+  --surface: #f5f6f8;
+  --paper: #fffefa;
+}
+
+* { box-sizing: border-box; }
+html, body { background: #e7e8ec; }
+body { color: var(--ink); font: 16px/1.5 Inter, "Segoe UI", Arial, sans-serif; margin: 0; }
+.handout { margin: 2rem auto; max-width: 8.5in; }
+.page { background: var(--paper); box-shadow: 0 18px 46px rgb(23 37 78 / 16%); display: flex; flex-direction: column; min-height: 11in; padding: .52in .6in .42in; }
+.page + .page { margin-top: 2rem; }
+.masthead, footer { align-items: center; color: var(--muted); display: flex; font-size: .69rem; font-weight: 750; justify-content: space-between; letter-spacing: .075em; text-transform: uppercase; }
+.masthead { border-bottom: 1px solid var(--line); padding-bottom: .1in; }
+.masthead p, footer span { margin: 0; }
+.kicker { color: var(--navy); }
+.series-label, footer span:last-child { color: var(--green-dark); }
+.title-block { max-width: 6.5in; padding: .34in 0 .18in; }
+.title-block--compact { padding-bottom: .14in; }
+.eyebrow, .field-number, .field-label { color: var(--green-dark); font-size: .71rem; font-weight: 800; letter-spacing: .1em; margin: 0 0 .06rem; text-transform: uppercase; }
+h1, h2 { color: var(--navy); font-family: Georgia, "Times New Roman", serif; line-height: 1.1; }
+h1 { font-size: 2.48rem; letter-spacing: -.04em; margin: .1rem 0 .62rem; }
+h2 { font-size: 1.18rem; letter-spacing: -.02em; margin: 0 0 .22rem; }
+p { margin: 0 0 .75rem; }
+.deck { color: var(--muted); font-size: 1rem; margin-bottom: 0; }
+.map-intro { border-top: 1px solid var(--line); color: var(--muted); font-size: .84rem; padding: .14in 0; }
+.map-intro p { margin: 0; }
+.map-intro strong { color: var(--navy); }
+.field-grid { display: grid; gap: .12in; grid-template-columns: 1fr 1fr; }
+.field-card { border: 1px solid var(--line); border-top: 5px solid var(--navy); min-height: 2.31in; padding: .13in .14in; }
+.field-card--interaction { border-top-color: var(--green); }
+.field-card--expert { border-top-color: var(--gold); }
+.field-card--artifact { border-top-color: var(--navy-deep); }
+.field-card--expert .field-number, .field-card--expert .field-label { color: #796331; }
+.field-card ul { font-size: .75rem; line-height: 1.35; margin: .08in 0 .1in; padding-left: 1rem; }
+.field-card li + li { margin-top: .12rem; }
+.write-line { border-bottom: 1px solid var(--muted); color: var(--muted); font-family: Georgia, "Times New Roman", serif; font-size: .74rem; margin: .1in 0 .08in; padding-bottom: .04in; }
+.helper { color: var(--muted); font-size: .68rem; margin: 0; }
+.map-reminder, .revision-note { background: var(--navy-deep); border-top: 4px solid var(--green); color: #f6f8ff; margin-top: .2in; padding: .14in .18in; }
+.map-reminder .eyebrow, .revision-note .eyebrow { color: var(--gold); }
+.map-reminder h2, .revision-note h2 { color: #fff; font-size: 1.08rem; }
+.map-reminder p:last-child { font-size: .76rem; line-height: 1.36; margin: 0; }
+.prompt-section { border-top: 1px solid var(--line); padding-top: .16in; }
+.prompt-block { background: var(--navy-deep); border-left: 5px solid var(--green); color: #f6f8ff; margin: 0; padding: .18in .2in; white-space: pre-wrap; }
+.prompt-block code { font-family: "Fira Code", Consolas, monospace; font-size: .69rem; line-height: 1.43; }
+.revision-note { margin-top: .2in; }
+.revision-note dl { display: grid; gap: .08in; grid-template-columns: 1fr 1fr; margin: .1in 0 0; }
+.revision-note dl div { border-left: 1px solid rgb(255 255 255 / 34%); padding-left: .1in; }
+.revision-note dt { color: var(--gold); font-size: .69rem; font-weight: 800; letter-spacing: .04em; text-transform: uppercase; }
+.revision-note dd { font-size: .76rem; line-height: 1.34; margin: .06rem 0 0; }
+footer { border-top: 1px solid var(--line); margin-top: auto; padding-top: .1in; }
+
+@media (max-width: 700px) {
+  .handout { margin: 0; }
+  .page { box-shadow: none; min-height: auto; padding: 1.5rem; }
+  .page + .page { margin-top: 0; }
+  .masthead, footer { align-items: flex-start; flex-direction: column; gap: .25rem; }
+  .field-grid, .revision-note dl { grid-template-columns: 1fr; }
+  h1 { font-size: 2.15rem; }
+}
+
+@page { margin: .4in; size: Letter; }
+@media print {
+  html, body { background: #fff; }
+  body { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  .handout { margin: 0; max-width: none; }
+  .page { box-shadow: none; min-height: 10.2in; padding: 0; }
+  .page + .page { break-before: page; margin: 0; }
+  .title-block { padding: .22in 0 .13in; }
+  h1 { font-size: 1.95rem; margin-bottom: .4rem; }
+  h2 { font-size: 1rem; }
+  .deck { font-size: .84rem; }
+  .map-intro { font-size: .71rem; padding: .09in 0; }
+  .field-grid { gap: .07in; }
+  .field-card { min-height: 1.92in; padding: .085in .1in; }
+  .field-card ul { font-size: .64rem; margin: .05in 0 .06in; }
+  .write-line { font-size: .62rem; margin: .055in 0; }
+  .helper { font-size: .58rem; }
+  .map-reminder, .revision-note { margin-top: .12in; padding: .1in .12in; }
+  .map-reminder h2, .revision-note h2 { font-size: .94rem; }
+  .map-reminder p:last-child, .revision-note dd { font-size: .65rem; }
+  .prompt-section { padding-top: .11in; }
+  .prompt-block { padding: .12in .14in; }
+  .prompt-block code { font-size: .57rem; line-height: 1.32; }
+  .revision-note dl { gap: .05in; margin-top: .07in; }
+  footer { font-size: .58rem; }
+}

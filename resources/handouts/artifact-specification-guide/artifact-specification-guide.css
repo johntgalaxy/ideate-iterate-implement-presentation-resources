@@ -1,0 +1,37 @@
+@import url("../interactive-design-map-template/interactive-design-map-template.css");
+
+.spec-section { border-top: 1px solid var(--line); margin-top: .18in; padding-top: .16in; }
+.section-heading { display: grid; gap: .12in; grid-template-columns: .42in 1fr; margin-bottom: .14in; }
+.section-heading > span { color: var(--green-dark); font-size: .71rem; font-weight: 800; letter-spacing: .1em; padding-top: .07rem; }
+.section-heading p { color: var(--muted); font-size: .84rem; margin: 0; }
+.spec-grid { display: grid; gap: .1in; grid-template-columns: repeat(3, 1fr); }
+.spec-grid article { border: 1px solid var(--line); border-top: 4px solid var(--navy); padding: .12in; }
+.spec-grid article:nth-child(2) { border-top-color: var(--gold); }
+.spec-grid article:nth-child(3) { border-top-color: var(--green); }
+.card-label { color: var(--green-dark); font-size: .67rem; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; }
+.spec-grid ul { font-size: .69rem; line-height: 1.35; margin: .08in 0 0; padding-left: 1rem; }
+.spec-grid li + li { margin-top: .16rem; }
+pre { background: var(--navy-deep); border-left: 5px solid var(--green); color: #f6f8ff; margin: 0; padding: .14in .17in; white-space: pre-wrap; }
+pre code { font: .62rem/1.4 "Fira Code", Consolas, monospace; }
+.review-flow { display: grid; gap: .06in; grid-template-columns: repeat(5, 1fr); }
+.review-flow span { background: var(--surface); border-top: 3px solid var(--green); color: var(--navy); font-size: .67rem; font-weight: 750; padding: .08in; text-align: center; }
+.review-flow span:last-child { background: var(--navy); border-top-color: var(--gold); color: #fff; }
+.spec-rule { background: var(--navy); color: #fff; margin-top: .18in; padding: .14in .18in; }
+.spec-rule .eyebrow { color: var(--gold); }
+.spec-rule h2 { color: #fff; font-size: 1.08rem; }
+.spec-rule p:last-child { font-size: .76rem; margin: 0; }
+
+@media (max-width: 700px) { .spec-grid, .review-flow { grid-template-columns: 1fr; } }
+@media print {
+  .spec-section { margin-top: .1in; padding-top: .08in; }
+  .spec-grid { gap: .05in; }
+  .spec-grid article { padding: .07in; }
+  .spec-grid ul { font-size: .57rem; line-height: 1.27; }
+  pre { padding: .08in .1in; }
+  pre code { font-size: .5rem; line-height: 1.25; }
+  .review-flow { gap: .035in; }
+  .review-flow span { font-size: .55rem; padding: .05in; }
+  .spec-rule { margin-top: .1in; padding: .08in .1in; }
+  .spec-rule h2 { font-size: .9rem; }
+  .spec-rule p:last-child { font-size: .62rem; }
+}

@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="IMPLEMENT companion for packaging an HTML activity as learning media, importing it as a page, and preserving editable source files.">
+    <title>Artifact Specification: SCORM Packaging and Page Import</title>
+    <link rel="stylesheet" href="scorm-packaging-pattern.css">
+  </head>
+  <body>
+    <main class="handout">
+      <header class="masthead"><span>Ideate. Iterate. Implement.</span><span>HANDOUT</span></header>
+      <section class="title-block"><p class="eyebrow">Artifact Specification · packaging</p><h1>SCORM as a<br>media container</h1><p class="deck">Import the tested package as a <strong>page</strong>, not an assessment. The page editor can then adjust the embedded activity’s underlying width while the activity stays in its instructional context.</p></section>
+      <section><div class="section-heading"><span>01</span><div><h2>Minimal folder pattern</h2><p>Zip the files inside the activity folder—not the containing folder.</p></div></div><pre><code>activity-folder/
+  index.html
+  imsmanifest.xml
+  assets/</code></pre><p class="callout">The zip should open directly to <code>index.html</code> and <code>imsmanifest.xml</code>. Keep every local image, stylesheet, script, font, and media file in the package.</p></section>
+      <section><div class="section-heading"><span>02</span><div><h2>Minimal manifest shape</h2><p>Ask the builder to create the complete SCORM 1.2 manifest and list every local asset.</p></div></div><pre class="manifest"><code>&lt;manifest ...&gt;
+  &lt;resource ... href="index.html"&gt;
+    &lt;file href="index.html" /&gt;
+    &lt;file href="assets/name.ext" /&gt;
+  &lt;/resource&gt;
+&lt;/manifest&gt;</code></pre></section>
+      <section><div class="section-heading"><span>03</span><div><h2>Test, package, import as a page, preserve</h2></div></div><ol class="steps steps--compact"><li>Test editable source: keyboard, reset, screen size, and completion.</li><li>Set <code>index.html</code> as the entry file.</li><li>Create the manifest and list every local asset.</li><li>Zip the package contents.</li><li><strong>Import as a page</strong>, not as an assessment.</li><li>Open the page in the Rich Content Editor and adjust the embedded activity’s underlying width.</li><li>Preview as a student, then add instructions and follow-up where the learning sequence needs them.</li><li>Preserve source, assets, design record, prompts, and tested package.</li></ol></section>
+      <aside class="guardrails"><p class="eyebrow">Guardrails</p><p><strong>Keep the SCORM activity ungraded.</strong> Use a Canvas quiz, assignment, discussion, or rubric when assessment is needed. Keep the deployable zip separate from editable project files, and retain both outside Canvas.</p></aside>
+      <footer><span>Hillsborough College | Summer Institute 2026</span><span>1</span></footer>
+    </main>
+  </body>
+</html>

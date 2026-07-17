@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="IMPLEMENT companion for preserving a durable project record, documenting major iterations, and restarting an AI conversation with context.">
+    <title>A Simple Project Workflow</title>
+    <link rel="stylesheet" href="project-workflow.css">
+  </head>
+  <body>
+    <main class="handout">
+      <section class="page" aria-labelledby="page-title">
+        <header class="masthead"><p class="kicker">Ideate. Iterate. Implement.</p><p class="series-label">HANDOUT</p></header>
+        <section class="title-block"><p class="eyebrow">A Simple Project Workflow</p><h1 id="page-title">Save the work,<br>not just the chat</h1><p class="deck">Keep a durable project record so a new conversation can continue from your current design, recent history, and rationale.</p></section>
+
+        <section class="workflow-section"><div class="section-heading"><span>01</span><div><h2>Create one project folder</h2><p>Use your preferred cloud service. Keep every project file in one place.</p></div></div><pre><code>Orbital Mechanics Interactive/
+  Interactive Design Map.docx
+  Iteration 1.docx
+  Iteration 2.docx
+  Iteration 3.docx
+  Prompt.md
+  assets/
+    diagrams/
+    images/
+    references/
+  final-scorm/</code></pre></section>
+
+        <section class="workflow-section preservation-grid" aria-label="Preserve design and iteration records">
+          <article class="record-card design-map"><p class="card-label">02 · Current state</p><h2>Save the Design Map</h2><p>The Interactive Design Map always represents the current design. Update it as your thinking evolves.</p><p class="card-note">Bring this document to a new conversation.</p></article>
+          <article class="record-card iterations"><p class="card-label">03 · Recent history</p><h2>Save major iterations separately</h2><p>Do not overwrite your work.</p><code class="file-list">Iteration 1.docx<br>Iteration 2.docx<br>Iteration 3.docx<br>Iteration 4.docx</code><ul><li>What changed</li><li>Why it changed</li><li>Which design lens guided the revision</li></ul></article>
+        </section>
+
+        <section class="workflow-section restart-section"><div class="section-heading"><span>04</span><div><h2>If you lose your AI chat</h2><p>Do not panic. Start a new conversation with the project record.</p></div></div><div class="restart-grid"><div class="attach-card"><p class="card-label">Attach</p><ul><li>Your current Interactive Design Map</li><li>Your two most recent iteration documents</li><li>Any supporting assets</li></ul></div><pre class="restart-prompt"><code>I'm continuing this instructional design project. The attached Interactive Design Map represents the current design. The attached Iteration 3 and Iteration 4 documents describe the most recent revisions and rationale. Continue from this state and preserve the existing design decisions while helping me refine the artifact further.</code></pre></div></section>
+
+        <aside class="workflow-rule"><p class="eyebrow">What the AI now has</p><dl><div><dt>Current state</dt><dd>The active design</dd></div><div><dt>Recent history</dt><dd>The latest changes</dd></div><div><dt>Design rationale</dt><dd>Why those changes matter</dd></div></dl><p>It can continue without the original chat.</p></aside>
+        <footer><span>Hillsborough College | Summer Institute 2026</span></footer>
+      </section>
+    </main>
+  </body>
+</html>
