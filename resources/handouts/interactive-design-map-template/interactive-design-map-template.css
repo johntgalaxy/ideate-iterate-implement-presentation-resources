@@ -33,15 +33,15 @@ p { margin: 0 0 .75rem; }
 .map-intro { border-top: 1px solid var(--line); color: var(--muted); font-size: .84rem; padding: .14in 0; }
 .map-intro p { margin: 0; }
 .map-intro strong { color: var(--navy); }
-.field-grid { display: grid; gap: .12in; grid-template-columns: 1fr 1fr; }
-.field-card { border: 1px solid var(--line); border-top: 5px solid var(--navy); min-height: 2.31in; padding: .13in .14in; }
+.field-grid { display: grid; gap: .12in; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); }
+.field-card { border: 1px solid var(--line); border-top: 5px solid var(--navy); min-width: 0; min-height: 2.31in; padding: .13in .14in; }
 .field-card--interaction { border-top-color: var(--green); }
 .field-card--expert { border-top-color: var(--gold); }
 .field-card--artifact { border-top-color: var(--navy-deep); }
 .field-card--expert .field-number, .field-card--expert .field-label { color: #796331; }
 .field-card ul { font-size: .75rem; line-height: 1.35; margin: .08in 0 .1in; padding-left: 1rem; }
 .field-card li + li { margin-top: .12rem; }
-.write-line { border-bottom: 1px solid var(--muted); color: var(--muted); font-family: Georgia, "Times New Roman", serif; font-size: .74rem; margin: .1in 0 .08in; padding-bottom: .04in; }
+.write-line { border-bottom: 1px solid var(--muted); color: var(--muted); font-family: Georgia, "Times New Roman", serif; font-size: .74rem; margin: .1in 0 .08in; overflow-wrap: anywhere; padding-bottom: .04in; }
 .helper { color: var(--muted); font-size: .68rem; margin: 0; }
 .map-reminder, .revision-note { background: var(--navy-deep); border-top: 4px solid var(--green); color: #f6f8ff; margin-top: .2in; padding: .14in .18in; }
 .map-reminder .eyebrow, .revision-note .eyebrow { color: var(--gold); }
